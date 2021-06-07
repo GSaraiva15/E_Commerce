@@ -1,8 +1,8 @@
-<div class="table-responsive">
+<div class="table-responsive" style="width:100%;">
     <table class="table-striped text-center">
         <thead>
             <tr>
-                <th class="text-danger  ">Name</th>
+                <th>Name</th>
                 <th>Points</th>
                 <th>Date</th>
             </tr>
