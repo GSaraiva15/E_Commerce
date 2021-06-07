@@ -36,7 +36,7 @@
         `id_point` INT(11) NOT NULL,
         `fk_user_id` MEDIUMINT(8) UNSIGNED NOT NULL,
         `pontos` INT(11) NOT NULL,
-        `data` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        `data` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
         PRIMARY KEY (`id_point`),
         INDEX `fk_cscart_points_system_cscart_users_idx` (`fk_user_id` ASC))
         </item>
