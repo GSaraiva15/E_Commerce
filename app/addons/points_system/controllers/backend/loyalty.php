@@ -22,3 +22,24 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         Tygh::$app['view'] -> assign('dados', $points_pessoa_list);
     }
 }
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if($mode == 'manage'){
+        $quantity = $_POST['quantityPoints'];
+        $id_adicionar = $_POST['idescondido'];
+
+        $chain = "Insert into cscart_points_system(fk_user_id, pontos) values ('$id_adicionar', '$quantity')";
+        
+        if (empty($_POST['quantityPoints']) || $quantity == 0){
+            echo "Invalid Value";
+        }else{
+            db_query($chain);
+        }
+
+        $chain2 = "Select distinct(fk_user_id) id_user, sum(pontos) pontos_ganhos, firstname, lastname from cscart_points_system as P Inner Join cscart_users AS U on P.fk_user_id = U.user_id group by user_id";
+
+        $points_list = db_get_array($chain2);
+
+        Tygh::$app['view'] -> assign('dados', $points_list); 
+    }
+}

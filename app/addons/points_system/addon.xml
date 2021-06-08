@@ -33,7 +33,7 @@
     <queries>
         <item for = "install">
         CREATE TABLE IF NOT EXISTS `cscart_points_system` (
-        `id_point` INT(11) NOT NULL,
+        `id_point` INT(11) NOT NULL AUTO_INCREMENT,
         `fk_user_id` MEDIUMINT(8) UNSIGNED NOT NULL,
         `pontos` INT(11) NOT NULL,
         `data` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),

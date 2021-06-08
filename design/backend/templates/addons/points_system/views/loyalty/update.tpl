@@ -1,5 +1,5 @@
-<div class="table-responsive" style="width:100%;">
-    <table class="table-striped text-center">
+<div class="table-responsive" style="width:100%; padding-top:1%;">
+    <table class="table-striped text-center" style="width:100%;">
         <thead>
             <tr>
                 <th>Name</th>
