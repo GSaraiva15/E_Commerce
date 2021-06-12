@@ -3,6 +3,11 @@
         <label for="{$id_prefix}elm_email" class="cm-required cm-email">{__("email")}<i>*</i></label>
         <input type="text" id="{$id_prefix}elm_email" name="user_data[email]" size="32" value="{$user_data.email}" class="ty-input-text {$_class}" {$disabled_param} />
     </div>
+
+    <div class="ty-control-group">
+        <label for="elm_emailReferencia" class="cm-required cm-email">{__("email Referencia")}<i>*</i></label>
+        <input type="text" id="elm_emailReferencia" name="user_data[emailReferencia]" size="32" value="{$user_data.emailReferencia}" class="ty-input-text {$_class}" {$disabled_param} />
+    </div>
 {else}
 
 {$fields = []}
