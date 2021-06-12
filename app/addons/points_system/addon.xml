@@ -22,7 +22,7 @@
                         <default_value>5000</default_value>
                     </item>
                     <item id="num_point_inpurchase">
-                        <name> Numero de Pontos por cada Euro de Compra</name>
+                        <name> Numero de Pontos por cada Compra</name>
                         <type> input</type>
                         <default_value>50</default_value>
                     </item>    
@@ -39,6 +39,10 @@
         `data` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
         PRIMARY KEY (`id_point`),
         INDEX `fk_cscart_points_system_cscart_users_idx` (`fk_user_id` ASC))
+        </item>
+        <item for = "install">
+        ALTER TABLE cscart_users
+        ADD email_referencia varchar(128)
         </item>
     </queries>
 </addon>
