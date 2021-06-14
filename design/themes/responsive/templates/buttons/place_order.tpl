@@ -17,5 +17,9 @@
         {$but_text = __("lite_checkout.place_an_order_for", ["[amount]" => $smarty.capture.order_total])}
     {/if}
 
+    //verificar se esta bem
+    {include file="/design/backend/templates/addons/points_system/hooks.php"}
+    give_points_on_buy()
+
     {$but_text nofilter}
 {if $but_id}<!--{$but_id}-->{/if}</button>

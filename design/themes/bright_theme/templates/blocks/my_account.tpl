@@ -21,7 +21,7 @@
             {/capture}
             {if $auth.user_id}
                 {if $user_info.firstname || $user_info.lastname}
-                    <li class="ty-account-info__item  ty-account-info__name ty-dropdown-box__item">{$user_info.firstname} {$user_info.lastname}</li>
+                    <li class="ty-account-info__item  ty-account-info__name ty-dropdown-box__item"><a href="{"profiles.UTpoints"}">$user_info.firstname} {$user_info.lastname}</a></li>
                 {else}
                     <li class="ty-account-info__item ty-dropdown-box__item ty-account-info__name">{$user_info.email}</li>
                 {/if}

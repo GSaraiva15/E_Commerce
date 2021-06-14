@@ -21,6 +21,17 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         Tygh::$app['view'] -> assign('dados', $points_pessoa_list);
     }
+
+    if($mode == 'UTpoints'){
+        $user = $_SESSION['user'];
+        $loggeduserid = $user['id'];
+
+        $chainPessoaLogIn = "Select firstname, lastname, pontos, data from cscart_points_system as P Inner Join cscart_users AS U on P.fk_user_id = U.user_id where user_id='$loggeduserid'";
+        
+        $points_pessoa_list_frontend = db_get_array($chainPessoaLogIn);
+
+        Tygh::$app['view'] -> assign('dados', $points_pessoa_list_frontend);
+    }
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
